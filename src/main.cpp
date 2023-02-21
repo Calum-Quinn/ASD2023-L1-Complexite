@@ -2,6 +2,8 @@
 #include <vector>
 #include <random>
 #include "test.cpp"
+#include "temps.cpp"
+#include "tris.cpp"
 
 using namespace std;
 
@@ -25,6 +27,8 @@ int main() {
 
    cout << boolalpha << estTrie(vec1) << endl;
    cout << boolalpha << estTrie(vec2) << endl;
+
+   mesure_temps(bubbleSort(vec1));
 
    return 0;
 }
