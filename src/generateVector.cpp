@@ -10,19 +10,29 @@ vector<T> generateVector(size_t n, int seed, typeTri tri) {
    vector<T> vecteur(n);
 
    if(tri == typeTri::CROISSANT) {
-      for (T i = 0; i < vecteur.size(); ++i) {
-         vecteur[i];
+      for (int i = 0; i < vecteur.size(); ++i) {
+         vecteur[T(i)];
       }
    }
 
    if(tri == typeTri::DECROISSANT) {
-      for (T i = vecteur.size() - 1; i >= 0; --i) {
-         vecteur[i];
+      for (int i = vecteur.size() - 1; i >= 0; --i) {
+         vecteur[T(i)];
       }
    }
 
    if (tri == typeTri::ALEATOIRE) {
+       for (int i = 0; i < vecteur.size(); ++i) {
+           vecteur[T(i)];
+       }
+       shuffle(vecteur.begin(), vecteur.end(), default_random_engine(seed));
+   }
 
+   if (tri == typeTri::PRESQUETRIE) {
+       for (int i = 0; i < vecteur.size(); ++i) {
+           srand(seed);
+           vecteur[i] = int(double(i)/2. + double(rand()%101)/2.); // Somme pondérée entre tri croissant et aléatoire
+       }
    }
 
    return vecteur;
