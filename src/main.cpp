@@ -16,7 +16,7 @@ int main() {
    vector<int> vec1 = {1,2,3,4,5};
    vector<double> vec2 = {1.,3.,2.,4.,5.};
 
-   //cout << srand(36) << endl;
+   //Après un srand(...) tous les appels de rand() sont prévisibles
    srand(36);
 
    cout << rand() << endl;
