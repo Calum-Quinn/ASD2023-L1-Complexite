@@ -22,3 +22,38 @@ void bubbleSort(vector<T>& v){
    }
 }
 
+
+//---------------------------------------------------------
+// Fonction de tri par insertion
+template <typename T>
+void insertSort(vector<T>& v){
+   int tmp;
+   size_t j;
+   for (size_t i = 1; i < v.size(); ++i) {
+      tmp = v[i];
+      j   = i;
+      while (j >= 1 and v[j - 1] > tmp) {
+         v[j] = v[j - 1];
+         --j;
+      }
+      v[j] = tmp;
+   }
+}
+
+
+//--------------------------------------------------------
+//Fonction de tri par sélection
+template <typename T>
+void selectionSort(vector<T>& v) {
+   if (v.size() > 0) {
+      size_t iMin;
+      for (size_t i = 0; i < v.size() - 1; ++i) {
+         iMin = i;
+         for (size_t j = i + 1; j < v.size(); ++j) {
+            if (v[j] < v[iMin])
+               iMin = j;
+         }
+         swap(v[i], v[iMin]);
+      }
+   }
+}
