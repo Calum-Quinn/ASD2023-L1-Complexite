@@ -1,6 +1,6 @@
 # ASD Labo 1 : Complexite
 
-Editez ce fichier pour y indiquer le numéro et les noms de tous les membres de votre groupe.
+Labo_01_F 
 
 Lisez l'[énoncé](enonce). 
 
