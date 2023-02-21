@@ -4,6 +4,17 @@
 
 using namespace std;
 
+class OpCounter{
+public:
+
+
+private:
+   int i;
+   static unsigned cnt;
+};
+
+unsigned cnt = 0;
+
 int main() {
 
    vector<int> vec1 = {1,2,3,4,5};
