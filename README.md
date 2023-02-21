@@ -1,6 +1,9 @@
 # ASD Labo 1 : Complexite
 
-Labo_01_F 
+Labo_01_F :
+- Dario Vasques
+- Ewan Mariaux
+- Calum Quinn
 
 Lisez l'[énoncé](enonce). 
 
