@@ -7,14 +7,7 @@
 
 using namespace std;
 
-class OpCounter{
-public:
 
-
-private:
-   int i;
-   static unsigned cnt;
-};
 
 unsigned cnt = 0;
 
