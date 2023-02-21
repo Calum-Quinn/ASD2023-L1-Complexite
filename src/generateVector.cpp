@@ -1,4 +1,7 @@
+#include <vector>
+#include <random>
 
+using namespace std;
 
 enum class typeTri {CROISSANT, DECROISSANT, ALEATOIRE, PRESQUETRIE};
 
