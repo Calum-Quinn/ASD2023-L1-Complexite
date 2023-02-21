@@ -2,7 +2,7 @@
 #include <vector>
 #include <random>
 #include "test.cpp"
-#include "temps.cpp"
+#include "temps.h"
 #include "tris.h"
 
 using namespace std;
@@ -17,11 +17,15 @@ int main() {
    vector<double> vec2 = {1.,3.,2.,4.,5.};
 
    //cout << srand(36) << endl;
+   srand(36);
+
+   cout << rand() << endl;
+   cout << rand() << endl;
 
    cout << boolalpha << estTrie(vec1) << endl;
    cout << boolalpha << estTrie(vec2) << endl;
 
-   //mesure_temps(bubbleSort(vec1));
+   //mesure_temps(bubbleSort);
 
    return 0;
 }

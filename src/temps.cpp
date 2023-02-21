@@ -1,7 +1,7 @@
-
 #include <chrono>
 #include <iostream>
 #include "tris.cpp"
+#include "temps.h"
 
 using namespace std;
 
@@ -17,4 +17,3 @@ void mesure_temps(Fn f) {
            << endl;
    }
 }
-
