@@ -1,42 +1,44 @@
 
+template <typename T>
 class OpCounter{
 public:
-    OpCounter(int i) : i(i){};
+    OpCounter(T i) : val(i){};
     static void resetCnt();
-    OpCounter& operator++();
-    OpCounter  operator++(int);
     bool operator<(const OpCounter& autre) const;
     bool operator>(const OpCounter& autre) const;
+    bool operator<=(const OpCounter& autre) const;
+    bool operator>=(const OpCounter& autre) const;
 private:
-    int i;
-    static unsigned cnt;
+    T val;
+    static unsigned  cntAff,
+                     cntComp,
+                     cntIt;
 };
 
-
-OpCounter &OpCounter::operator++() {
-    this->cnt++;
-    return *this;
+template <typename T>
+bool OpCounter<T>::operator<(const OpCounter& autre) const{
+    return this->val < autre.val;
 }
 
-
-OpCounter OpCounter::operator++(int) {
-    OpCounter tmp = *this;
-    ++(*this);
-    return tmp;
-}
-
-
-bool OpCounter::operator<(const OpCounter& autre) const{
-    return this->cnt < autre.cnt;
-}
-
-
-bool OpCounter::operator>(const OpCounter& autre) const{
+template <typename T>
+bool OpCounter<T>::operator>(const OpCounter& autre) const{
     return autre < *this;
 }
 
+template <typename T>
+bool OpCounter<T>::operator<=(const OpCounter& autre) const{
+   return this->val <= autre.val;
+}
 
-void OpCounter::resetCnt() {
-    cnt   = 0;
+template <typename T>
+bool OpCounter<T>::operator>=(const OpCounter& autre) const{
+   return autre < *this;
+}
+
+template <typename T>
+void OpCounter<T>::resetCnt() {
+    cntAff  = 0;
+    cntComp = 0;
+    cntIt   = 0;
 }
 
