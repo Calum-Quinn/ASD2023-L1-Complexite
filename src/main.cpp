@@ -32,7 +32,7 @@ int main() {
 
 //bool test = bubbleSort(vec1);
 
- mesure_temps(bubbleSort);
+ mesure_temps(bubbleSort<int>); // TODO: Il faut indiquer le type générique
 //   mesure_temps(insertSort(vec1));
 //   mesure_temps(selectionSort(vec1));
 
