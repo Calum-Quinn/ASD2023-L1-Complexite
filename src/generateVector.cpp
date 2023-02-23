@@ -1,9 +1,9 @@
-#include <vector>
 #include <random>
+#include "generateVector.h"
 
 using namespace std;
 
-enum class typeTri {CROISSANT, DECROISSANT, ALEATOIRE, PRESQUETRIE};
+
 
 template <typename T>
 vector<T> generateVector(size_t n, int seed, typeTri tri) {

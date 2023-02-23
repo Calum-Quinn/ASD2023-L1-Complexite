@@ -1,4 +1,5 @@
 #include "tris.h"
+#include "test.cpp"
 #include <algorithm>
 #include <iostream>
 
@@ -10,7 +11,7 @@ using namespace std;
 //---------------------------------------------------------
 // Fonction de tri à bulles
 template <typename T>
-void bubbleSort(vector<T>& v){
+bool bubbleSort(vector<T>& v){
    if (v.size() > 0){
       for (size_t i = 0; i < v.size() - 1; ++i){
          for (size_t j = 1; j < v.size() - i; ++j){
@@ -20,6 +21,7 @@ void bubbleSort(vector<T>& v){
          }
       }
    }
+   return estTrie(v);
 }
 
 

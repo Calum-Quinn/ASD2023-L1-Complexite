@@ -4,6 +4,7 @@
 #include "test.cpp"
 #include "temps.h"
 #include "tris.h"
+#include "generateVector.h"
 
 using namespace std;
 
@@ -25,7 +26,15 @@ int main() {
    cout << boolalpha << estTrie(vec1) << endl;
    cout << boolalpha << estTrie(vec2) << endl;
 
-   //mesure_temps(bubbleSort);
+   vector<int> generation = generateVector<int>(15, 47, typeTri(3));
+
+    for (int i : generation) {
+        cout << i << ", ";
+    }
+
+//   mesure_temps(bubbleSort(vec1));
+//   mesure_temps(insertSort(vec1));
+//   mesure_temps(selectionSort(vec1));
 
    return 0;
 }
