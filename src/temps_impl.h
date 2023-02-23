@@ -15,7 +15,8 @@ using namespace std;
 template<typename Fn>
 void mesure_temps(Fn f) {
     auto t1 = std::chrono::high_resolution_clock::now();
-    auto r = f();
+    std::vector<int> v = {1, 2, 3};
+    auto r = f(v); // TODO: Il faut respecter la signature EXACTE de la méthode
     auto t2 = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double, std::milli> time_ms = t2 - t1;
     cout << "f(" << "v" << ") = " << r
