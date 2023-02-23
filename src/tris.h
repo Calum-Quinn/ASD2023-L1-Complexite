@@ -3,7 +3,13 @@
 
 #include <vector>
 
-#endif //ASD2022_L1_COMPLEXITE_TRIS_H
+template <typename T>
+bool bubbleSort(std::vector<T>& v);
 
 template <typename T>
-void bubbleSort(std::vector<T>& v);
+bool insertSort(std::vector<T>& v);
+
+template <typename T>
+bool selectionSort(std::vector<T>& v);
+
+#endif //ASD2022_L1_COMPLEXITE_TRIS_H
