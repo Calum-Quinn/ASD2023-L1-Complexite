@@ -1,14 +1,12 @@
 #include <iostream>
 #include <vector>
 #include <random>
-#include "test.cpp"
+#include "test.h"
 #include "temps.h"
 #include "tris.h"
 #include "generateVector.h"
 
 using namespace std;
-
-
 
 unsigned cnt = 0;
 
@@ -26,13 +24,15 @@ int main() {
    cout << boolalpha << estTrie(vec1) << endl;
    cout << boolalpha << estTrie(vec2) << endl;
 
-   vector<int> generation = generateVector<int>(15, 47, typeTri(3));
+//   vector<int> generation = generateVector<int>(15, 47, typeTri(3));
+//
+//    for (int i : generation) {
+//        cout << i << ", ";
+//    }
 
-    for (int i : generation) {
-        cout << i << ", ";
-    }
+//bool test = bubbleSort(vec1);
 
-//   mesure_temps(bubbleSort(vec1));
+ mesure_temps(bubbleSort);
 //   mesure_temps(insertSort(vec1));
 //   mesure_temps(selectionSort(vec1));
 
