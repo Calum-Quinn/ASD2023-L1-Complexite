@@ -12,16 +12,17 @@
 
 using namespace std;
 
-template<typename Fn>
-void mesure_temps(Fn f) {
+template<typename T, typename Fn>
+double mesure_temps(vector<T> v1, Fn f) {
     auto t1 = std::chrono::high_resolution_clock::now();
-    std::vector<int> v = {1, 2, 3};
-    auto r = f(v);
+    auto r = f(v1.begin(), v1.end());
     auto t2 = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double, std::milli> time_ms = t2 - t1;
     cout << "f(" << "v" << ") = " << r
          << " en " << time_ms.count() << " ms "
          << endl;
+
+    return (double)time_ms.count();
 
 }
 
