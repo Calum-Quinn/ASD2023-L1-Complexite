@@ -3,8 +3,8 @@
 
 #include <vector>
 
-template <typename T>
-bool bubbleSort(std::vector<T>& v);
+template <class T>
+bool bubbleSort(T begin, T end);
 
 template <typename T>
 bool insertSort(std::vector<T>& v);
