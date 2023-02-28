@@ -45,8 +45,8 @@ bool bubbleSort(T begin, T end){
 
 //---------------------------------------------------------
 // Fonction de tri par insertion
-template <typename T>
-bool insertSort(vector<T>& v){
+template <class T>
+bool insertSort(T begin, T end){
     int tmp;
     size_t j;
     for (size_t i = 1; i < v.size(); ++i) {
@@ -65,7 +65,7 @@ bool insertSort(vector<T>& v){
 //--------------------------------------------------------
 //Fonction de tri par sélection
 template <typename T>
-bool selectionSort(vector<T>& v) {
+bool selectionSort(T begin, T end) {
     if (v.size() > 0) {
         size_t iMin;
         for (size_t i = 0; i < v.size() - 1; ++i) {

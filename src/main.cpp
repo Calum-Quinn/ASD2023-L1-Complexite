@@ -13,6 +13,10 @@ unsigned cnt = 0;
 
 int main() {
 
+    const int VALEURSMIN = 10;
+    const int VALEURSMAX = 100;
+    const int SEED = 475678;
+
    vector<int> vec1 = {1,2,3,4,5};
    vector<double> vec2 = {1.,3.,2.,4.,5.};
 
