@@ -30,8 +30,8 @@ bool bubbleSort(vector<T> v){
 template <class T>
 bool bubbleSort(T begin, T end){
     if (begin != end){
-        for (T i = 0; i != end - 1; ++i){
-            for (T j = 1; j != end - i; ++j){
+        for (T i = begin; i != end - 1; ++i){
+            for (T j = begin + 1; j != end - i; ++j){
                 if (*(j-1) > *j) {
                     swap(*(j-1), *j);
                 }
