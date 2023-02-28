@@ -44,11 +44,15 @@ int main() {
         vector<int> vecteur = generateVector<int>(i, SEED, typeTri::CROISSANT);
 
         valeurs[compteur] = i;
-        mesures[3][i - VALEURSMIN] = mesure_temps(vecteur, std::sort<vector<int>::iterator>);
-        mesures[0][i - VALEURSMIN] = mesure_temps(bubbleSort<>,vecteur);
+
+        mesure_temps<int>(vecteur, bubbleSort<vector<int>::iterator>);
+
+        mesures[0][i - VALEURSMIN] = mesure_temps<int>(vecteur,bubbleSort<int>);
+
+
         mesures[1][i - VALEURSMIN] = mesure_temps(insertSort<vector<int>::iterator>,vecteur);
         mesures[2][i - VALEURSMIN] = mesure_temps(selectionSort<int>,vector<int>::iterator>,vecteur);
-        mesures[3][i - VALEURSMIN] = mesure_temps(sort,vecteur);
+        mesures[3][i - VALEURSMIN] = mesure_temps(vecteur, sort<vector<int>::iterator>);
         mesures[4][i - VALEURSMIN] = mesure_temps(stable_sort,vecteur);
     }
 
@@ -62,15 +66,6 @@ int main() {
     cout << endl << "Selection Sort : ";
     mesure_temps(selectionSort<int>, vec1);
      */
-    mesure_temps(sort, vec1);
-
-    sort(vec1.begin(), vec1.end());
-    stable_sort(vec1.begin(), vec1.end());
-
-    //sort()
-
-//   mesure_temps(insertSort(vec1));
-//   mesure_temps(selectionSort(vec1));
 
    return 0;
 }
