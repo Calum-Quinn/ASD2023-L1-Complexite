@@ -10,7 +10,6 @@ using namespace std;
 
 // Basé sur les exemples de tris du Git PRG1 de M Breguet
 
-
 //---------------------------------------------------------
 // Fonction de tri à bulles
 /*
