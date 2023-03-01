@@ -31,7 +31,7 @@ template <class T>
 bool bubbleSort(T begin, T end){
     if (begin != end){
         for (T i = begin; i != end - 1; ++i){
-            for (T j = begin + 1; j != end - i; ++j){
+            for (T j = begin + 1; *(j) != end - i; ++j){ // TODO : la comparaison avec end - i était incorrecte
                 if (*(j-1) > *j) {
                     swap(*(j-1), *j);
                 }
@@ -41,7 +41,7 @@ bool bubbleSort(T begin, T end){
     return 1;//estTrie(v);
 }
 
-
+// TODO : attention vous n'avez pas définit v dans les fonctions suivantes
 //---------------------------------------------------------
 // Fonction de tri par insertion
 template <class T>
