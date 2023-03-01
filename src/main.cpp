@@ -45,15 +45,15 @@ int main() {
 
         valeurs[compteur] = i;
 
-        mesure_temps<int>(vecteur, bubbleSort<vector<int>::iterator>);
+        mesure_temps(vecteur, bubbleSort<vector<int>::iterator>); // TODO : attention à la manière d'appeler la fonction
 
-        mesures[0][i - VALEURSMIN] = mesure_temps<int>(vecteur,bubbleSort<int>);
+        /*mesures[0][i - VALEURSMIN] = mesure_temps<int>(vecteur,bubbleSort<int>);
 
 
         mesures[1][i - VALEURSMIN] = mesure_temps(insertSort<vector<int>::iterator>,vecteur);
         mesures[2][i - VALEURSMIN] = mesure_temps(selectionSort<int>,vector<int>::iterator>,vecteur);
         mesures[3][i - VALEURSMIN] = mesure_temps(vecteur, sort<vector<int>::iterator>);
-        mesures[4][i - VALEURSMIN] = mesure_temps(stable_sort,vecteur);
+        mesures[4][i - VALEURSMIN] = mesure_temps(stable_sort,vecteur);*/
     }
 
     /*
