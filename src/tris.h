@@ -6,11 +6,11 @@
 template <class T>
 bool bubbleSort(T begin, T end);
 
-template <typename T>
-bool insertSort(std::vector<T>& v);
+template <class T>
+bool insertSort(T begin, T end);
 
-template <typename T>
-bool selectionSort(std::vector<T>& v);
+template <class T>
+bool selectionSort(T begin, T end);
 
 #include "tris_impl.h"
 

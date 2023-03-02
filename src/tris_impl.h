@@ -21,7 +21,7 @@ bool bubbleSort(T begin, T end){
             }
         }
     }
-    return is_sorted(begin, end);
+    return estTrie(begin, end);
 }
 
 //---------------------------------------------------------
@@ -29,44 +29,28 @@ bool bubbleSort(T begin, T end){
 
 template <class T>
 bool insertSort(T begin, T end){
-    int tmp;
+    T tmp;
     T j;
-    for (T i = begin; i != end; ++i) {
-        tmp = *i;
+    for (T i = begin + 1; i != end; ++i) {
+        *tmp = *i;
         j   = i;
-        while (j >= begin and *(j-1) > tmp) {
-            *j = *j-1;
+        while (j != begin and *(j - 1) > *tmp) {
+            *j = *(j-1);
             --j;
         }
         *j = *tmp;
     }
-    return is_sorted(begin. end);
+    return estTrie(begin, end);
 }
 
 
 //--------------------------------------------------------
 //Fonction de tri par sélection
-/*template <typename T>
+template <class T>
 bool selectionSort(T begin, T end) {
-    if (v.size() > 0) {
-        size_t iMin;
-        for (size_t i = 0; i < v.size() - 1; ++i) {
-            iMin = i;
-            for (size_t j = i + 1; j < v.size(); ++j) {
-                if (v[j] < v[iMin])
-                    iMin = j;
-            }
-            swap(v[i], v[iMin]);
-        }
-    }
-    return estTrie(v);
-}*/
-
-template <typename T>
-bool selectionSort(T begin, T end) {
-    //if (v.size() > 0) {
+    if (begin != end) {
         T iMin;
-        for (T i = 0; i != end - 1; ++i) {
+        for (T i = begin; i != end - 1; ++i) {
             iMin = i;
             for (T j = i + 1; j != end; ++j) {
                 if (*j < *iMin)
@@ -74,8 +58,8 @@ bool selectionSort(T begin, T end) {
             }
             swap(*i, *iMin);
         }
-    //}
-    return is_sorted(begin, end);
+    }
+    return estTrie(begin, end);
 }
 
 
