@@ -20,14 +20,14 @@ std::vector<T> generateVector(size_t n, int seed, typeTri tri) {
    }
 
    if (tri == typeTri::ALEATOIRE) {
-       for (int i = 0; i < vecteur.size(); ++i) {
-           vecteur[T(i)];
+       for (size_t i = 0; i < vecteur.size(); ++i) {
+           vecteur[T(i)] = i;
        }
        shuffle(vecteur.begin(), vecteur.end(), default_random_engine(seed));
    }
 
    if (tri == typeTri::PRESQUETRIE) {
-       for (int i = 0; i < vecteur.size(); ++i) {
+       for (size_t i = 0; i < vecteur.size(); ++i) {
            srand(seed);
            vecteur[i] = int(double(i)/2. + double(rand()%101)/2.); // Somme pondérée entre tri croissant et aléatoire
        }
