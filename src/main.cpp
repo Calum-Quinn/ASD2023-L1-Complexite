@@ -46,6 +46,7 @@ int main() {
         valeurs[compteur] = i;
 
         mesure_temps(vecteur, bubbleSort<vector<int>::iterator>); // TODO : attention à la manière d'appeler la fonction
+        mesure_temps(vecteur, sort<vector<int>::iterator>);
 
         /*mesures[0][i - VALEURSMIN] = mesure_temps<int>(vecteur,bubbleSort<int>);
 
@@ -67,5 +68,5 @@ int main() {
     mesure_temps(selectionSort<int>, vec1);
      */
 
-   return 0;
+   return EXIT_SUCCESS;
 }
