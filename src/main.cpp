@@ -22,13 +22,21 @@ int main() {
     vector<int> vec3 = {1,290,3,47,5,64,7,23,56};
    //vector<double> vec2 = {1.,3.,2.,4.,5.};
 
-   cout << insertSort(vec1.begin(), vec1.end()) << endl;
-//   cout << selectionSort(vec2.begin(), vec1.end());
-//   cout << bubbleSort(vec3.begin(), vec1.end());
+   cout << insertSort<vector<int>::iterator, int>(vec1.begin(), vec1.end()) << endl;
+  cout << selectionSort(vec2.begin(), vec2.end()) << endl;
+  cout << bubbleSort<vector<int>::iterator>(vec3.begin(), vec3.end()) << endl;
 
    for (int i : vec1) {
        cout << i << " ";
    }
+    cout << endl;
+    for (int i : vec2) {
+        cout << i << " ";
+    }
+    cout << endl;
+    for (int i : vec3) {
+        cout << i << " ";
+    }
 
 //   //Après un srand(...) tous les appels de rand() sont prévisibles
 //   srand(36);
