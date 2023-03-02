@@ -7,7 +7,7 @@
 
 #include <chrono>
 #include <iostream>
-#include "tris.h"
+//#include "tris.h"
 
 template<typename T, typename Fn>
 double mesure_temps(std::vector<T> v1, Fn f) {
