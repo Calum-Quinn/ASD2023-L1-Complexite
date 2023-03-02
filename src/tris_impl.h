@@ -10,15 +10,17 @@ using namespace std;
 
 // Basé sur les exemples de tris du Git PRG1 de M Breguet
 
-template <class T>
-bool bubbleSort(T begin, T end){
+template <class Iterator>
+bool bubbleSort(Iterator begin, Iterator end){
     if (begin != end){
-        for (T i = begin; i != end - 1; ++i){
-            for (T j = begin + 1; *(j) != end - i; ++j){ // TODO : la comparaison avec end - i était incorrecte
+        long long cpt = 0;
+        for (Iterator i = begin; i != end - 1; ++i){
+            for (Iterator j = begin + 1; j != end - cpt; ++j){ // TODO : la comparaison avec end - i était incorrecte
                 if (*(j-1) > *j) {
                     swap(*(j-1), *j);
                 }
             }
+            ++cpt;
         }
     }
     return is_sorted(begin, end);
@@ -34,11 +36,11 @@ bool insertSort(Iterator begin, Iterator end) {
     for (Iterator i = begin + 1; i != end; ++i) {
         tmp = *i;
         j   = i;
-        while (j != begin and *(j - 1) > *tmp) {
+        while (j != begin and *(j - 1) > tmp) {
             *j = *(j-1);
             --j;
         }
-        *j = *tmp;
+        *j = tmp;
     }
     return is_sorted(begin, end);
 }
