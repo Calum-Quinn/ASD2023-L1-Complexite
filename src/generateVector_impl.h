@@ -1,13 +1,11 @@
+#ifndef ASD2022_L1_COMPLEXITE_GENERATEVECTOR_IMPL_H
+#define ASD2022_L1_COMPLEXITE_GENERATEVECTOR_IMPL_H
+
 #include <random>
-#include "generateVector.h"
-
-using namespace std;
-
-
 
 template <typename T>
-vector<T> generateVector(size_t n, int seed, typeTri tri) {
-   vector<T> vecteur(n);
+std::vector<T> generateVector(size_t n, int seed, typeTri tri) {
+   std::vector<T> vecteur(n);
 
    if(tri == typeTri::CROISSANT) {
       for (int i = 0; i < vecteur.size(); ++i) {
@@ -45,3 +43,5 @@ int nbAleatoire(int valMin, int valMax) {
 
    return distr(generator);
 }
+
+#endif //ASD2022_L1_COMPLEXITE_GENERATEVECTOR_IMPL_H
