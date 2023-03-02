@@ -14,8 +14,8 @@ std::vector<T> generateVector(size_t n, int seed, typeTri tri) {
    }
 
    if(tri == typeTri::DECROISSANT) {
-      for (size_t i = vecteur.size() - 1; i >= 0; --i) {
-         vecteur[i] = i;
+      for (size_t i = 0; i < vecteur.size(); ++i) {
+         vecteur[i] = n - (i + 1);
       }
    }
 
