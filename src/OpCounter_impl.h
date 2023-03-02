@@ -5,6 +5,11 @@
 #ifndef ASD2022_L1_COMPLEXITE_OPCOUNTER_IMPL_H
 #define ASD2022_L1_COMPLEXITE_OPCOUNTER_IMPL_H
 
+unsigned  cntAff = 0,
+          cntComp = 0,
+          cntIt = 0;
+
+
 template <typename T>
 bool OpCounter<T>::operator< (const OpCounter& autre) const{
     ++cntComp;
