@@ -10,4 +10,5 @@ std::vector<T> generateVector(size_t n, int seed, typeTri tri);
 
 int nbAleatoire(int valMin, int valMax);
 
+//#include "ge
 #endif //ASD2022_L1_COMPLEXITE_GENERATEVECTOR_H
