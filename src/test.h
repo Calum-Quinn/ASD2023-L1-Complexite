@@ -3,9 +3,9 @@
 
 #include <algorithm>
 
-template <typename T>
-bool estTrie(const std::vector<T>& vec) {
-    return std::is_sorted(vec.begin(), vec.end());
+template <class T>
+bool estTrie(const T& begin, const T& end) {
+    return std::is_sorted(begin, end);
 }
 
 #endif //ASD2022_L1_COMPLEXITE_TEST_H
