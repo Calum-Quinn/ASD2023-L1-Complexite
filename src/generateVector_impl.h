@@ -9,19 +9,19 @@ std::vector<T> generateVector(size_t n, int seed, typeTri tri) {
 
    if(tri == typeTri::CROISSANT) {
       for (size_t i = 0; i < vecteur.size(); ++i) {
-         vecteur[T(i)] = i;
+         vecteur[i] = i;
       }
    }
 
    if(tri == typeTri::DECROISSANT) {
       for (size_t i = vecteur.size() - 1; i >= 0; --i) {
-         vecteur[T(i)] = i;
+         vecteur[i] = i;
       }
    }
 
    if (tri == typeTri::ALEATOIRE) {
        for (size_t i = 0; i < vecteur.size(); ++i) {
-           vecteur[T(i)] = i;
+           vecteur[i] = i;
        }
        shuffle(vecteur.begin(), vecteur.end(), default_random_engine(seed));
    }
