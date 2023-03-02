@@ -9,11 +9,8 @@
 #include <iostream>
 #include "tris.h"
 
-
-using namespace std;
-
 template<typename T, typename Fn>
-double mesure_temps(vector<T> v1, Fn f) {
+double mesure_temps(std::vector<T> v1, Fn f) {
     auto t1 = std::chrono::high_resolution_clock::now();
     //auto r = f(v1.begin(), v1.end());
     f(v1.begin(), v1.end());
