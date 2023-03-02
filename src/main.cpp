@@ -34,35 +34,18 @@ int main() {
     vector<int> vec2 = {1,290,3,47,5,64,7,23,56};
     vector<int> vec3 = {1,290,3,47,5,64,7,23,56};
 
-    cout << insertSort<vector<int>::iterator, int>(vec1.begin(), vec1.end()) << endl;
-    cout << selectionSort(vec2.begin(), vec2.end()) << endl;
-    cout << bubbleSort<vector<int>::iterator>(vec3.begin(), vec3.end()) << endl;
-
-    for (int i : vec1) {
-        cout << i << " ";
-    }
-    cout << endl;
-    for (int i : vec2) {
-        cout << i << " ";
-    }
-    cout << endl;
-    for (int i : vec3) {
-        cout << i << " ";
-    }
-
     vector<double> valeurs((VALEURSMAX - VALEURSMIN) / 10 + 1); //Vecteur pour stocker le nombre de valeurs triées
     vector<vector<double>> mesures(5); //Vecteur pour stocker des vecteurs de mesures de temps
                                                                 //de tris
-    for (int i = 0; i < mesures.size(); ++i) {
-        mesures[i].resize((VALEURSMAX - VALEURSMIN) / 10 + 1);
+    for (vector<double>& mesure : mesures) {
+        mesure.resize(((VALEURSMAX - VALEURSMIN) / 10 + 1));
     }
 
-    int compteur;
 //    vector<int> vecteur = generateVector<int>(10, SEED, typeTri::CROISSANT);
 //    mesures[0][0] = mesure_temps(vecteur, bubbleSort<vector<int>::iterator>);
 
     for (size_t i = VALEURSMIN, compteur = 0; i <= VALEURSMAX; i += PALIER, ++compteur) {
-        vector<int> vecteur = generateVector<int>(i, SEED, typeTri::CROISSANT);
+        vector<int> vecteur = generateVector<int>(i, SEED, typeTri::PRESQUETRIE);
 
         valeurs[compteur] = i;
 
@@ -102,7 +85,7 @@ void exporter_csv(string const& filename, const vector<double>& n_values, const 
     }
 
     out << "n";
-    for(int n : n_values) out << ";" << n;
+    for(double n : n_values) out << ";" << n;
     out << endl;
 
     for(size_t i = 0; i < mesures.size(); ++i) {
