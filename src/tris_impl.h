@@ -10,23 +10,6 @@ using namespace std;
 
 // Basé sur les exemples de tris du Git PRG1 de M Breguet
 
-//---------------------------------------------------------
-// Fonction de tri à bulles
-/*
-template <typename T>
-bool bubbleSort(vector<T> v){
-    if (v.size() > 0){
-        for (size_t i = 0; i < v.size() - 1; ++i){
-            for (size_t j = 1; j < v.size() - i; ++j){
-                if (v[j - 1] > v[j]) {
-                    swap(v[j - 1], v[j]);
-                }
-            }
-        }
-    }
-    return estTrie(v);
-}*/
-
 template <class T>
 bool bubbleSort(T begin, T end){
     if (begin != end){
@@ -41,24 +24,8 @@ bool bubbleSort(T begin, T end){
     return is_sorted(begin, end);
 }
 
-// TODO : attention vous n'avez pas définit v dans les fonctions suivantes
 //---------------------------------------------------------
 // Fonction de tri par insertion
-/*template <class T>
-bool insertSort(T begin, T end){
-    int tmp;
-    size_t j;
-    for (size_t i = 1; i < v.size(); ++i) {
-        tmp = v[i];
-        j   = i;
-        while (j >= 1 and v[j - 1] > tmp) {
-            v[j] = v[j - 1];
-            --j;
-        }
-        v[j] = tmp;
-    }
-    return estTrie(v);
-}*/
 
 template <class T>
 bool insertSort(T begin, T end){
@@ -71,7 +38,7 @@ bool insertSort(T begin, T end){
             *j = *j-1;
             --j;
         }
-        *j = tmp;
+        *j = *tmp;
     }
     return is_sorted(begin. end);
 }

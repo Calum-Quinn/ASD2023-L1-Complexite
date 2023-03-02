@@ -24,7 +24,6 @@ double mesure_temps(vector<T> v1, Fn f) {
          << endl;*/
 
     return (double)time_ms.count();
-
 }
 
 
