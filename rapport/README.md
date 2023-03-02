@@ -11,7 +11,11 @@ vous en fournit un exemple.
 Il doit inclure des graphiques au format svg produit - par exemple par excel - à partir de ces 
 données et illustrant votre analyse, comme les 2 exemples ci-dessous. 
 
-![example1](svg/example1.svg)
+Voici le graphique pour les 5 types de tris avec un vecteur trié par ordre croissant.
 
-![example2](svg/example2.svg)
+![croissant](svg/tri_croissant.svg)
 
+Nous pouvons constater que pour un petit nombre de valeurs tous les tris font presque le même temps.
+Les tris d'Insertion, Sort et stable Sort font presque les mêmes temps quelque soit le nombre de donnée.
+Dès que nous commencons à augmenter le nombre de valeur le tri par Bubble Sort est celui qui prend le plus de temps.
+Le tris qui prend le moins de temps dans son ensemble est le tris par Insertion.
