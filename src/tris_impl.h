@@ -2,7 +2,6 @@
 #define ASD2022_L1_COMPLEXITE_TRIS_IMPL_H
 
 
-#include "test.h"
 #include <algorithm>
 #include <iostream>
 
