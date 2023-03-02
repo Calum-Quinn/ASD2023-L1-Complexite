@@ -7,22 +7,47 @@
 
 template <typename T>
 bool OpCounter<T>::operator< (const OpCounter& autre) const{
+    ++cntComp;
     return this->val < autre.val;
 }
 
 template <typename T>
-bool OpCounter<T>::operator>(const OpCounter& autre) const{
+bool OpCounter<T>::operator> (const OpCounter& autre) const{
+    ++cntComp;
     return autre < *this;
 }
 
 template <typename T>
-bool OpCounter<T>::operator<=(const OpCounter& autre) const{
+bool OpCounter<T>::operator<= (const OpCounter& autre) const{
+    ++cntComp;
     return this->val <= autre.val;
 }
 
 template <typename T>
-bool OpCounter<T>::operator>=(const OpCounter& autre) const{
+bool OpCounter<T>::operator>= (const OpCounter& autre) const{
+    ++cntComp;
     return autre < *this;
+}
+
+template <typename T>
+OpCounter& OpCounter<T>::operator=(const OpCounter& autre) const{
+    if(this = &autre)
+        return *this;
+    ++cntAff;
+    this->i = autre.i;
+    return *this;
+}
+
+template <typename T>
+bool operator== (const OpCounter& autre) const{
+    ++cntComp;
+    return this->i == autre.i;
+}
+
+template <typename T>
+bool operator!= (const OpCounter& autre) const{
+    ++cntComp;
+    return not(*this == autre);
 }
 
 template <typename T>
