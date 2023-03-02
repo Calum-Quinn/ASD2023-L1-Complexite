@@ -10,8 +10,8 @@ class OpCounter{
 public:
     OpCounter(T i) : val(i){};
     static void resetCnt();
-    bool operator<(const OpCounter& autre) const;
-    bool operator>(const OpCounter& autre) const;
+    bool operator< (const OpCounter& autre) const;
+    bool operator> (const OpCounter& autre) const;
     bool operator<=(const OpCounter& autre) const;
     bool operator>=(const OpCounter& autre) const;
 private:
