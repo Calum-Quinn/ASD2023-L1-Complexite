@@ -38,13 +38,13 @@ bool bubbleSort(T begin, T end){
             }
         }
     }
-    return 1;//estTrie(v);
+    return is_sorted(begin, end);
 }
 
 // TODO : attention vous n'avez pas définit v dans les fonctions suivantes
 //---------------------------------------------------------
 // Fonction de tri par insertion
-template <class T>
+/*template <class T>
 bool insertSort(T begin, T end){
     int tmp;
     size_t j;
@@ -58,12 +58,28 @@ bool insertSort(T begin, T end){
         v[j] = tmp;
     }
     return estTrie(v);
+}*/
+
+template <class T>
+bool insertSort(T begin, T end){
+    int tmp;
+    T j;
+    for (T i = begin; i != end; ++i) {
+        tmp = *i;
+        j   = i;
+        while (j >= begin and *(j-1) > tmp) {
+            *j = *j-1;
+            --j;
+        }
+        *j = tmp;
+    }
+    return is_sorted(begin. end);
 }
 
 
 //--------------------------------------------------------
 //Fonction de tri par sélection
-template <typename T>
+/*template <typename T>
 bool selectionSort(T begin, T end) {
     if (v.size() > 0) {
         size_t iMin;
@@ -77,6 +93,22 @@ bool selectionSort(T begin, T end) {
         }
     }
     return estTrie(v);
+}*/
+
+template <typename T>
+bool selectionSort(T begin, T end) {
+    //if (v.size() > 0) {
+        T iMin;
+        for (T i = 0; i != end - 1; ++i) {
+            iMin = i;
+            for (T j = i + 1; j != end; ++j) {
+                if (*j < *iMin)
+                    iMin = j;
+            }
+            swap(*i, *iMin);
+        }
+    //}
+    return is_sorted(begin, end);
 }
 
 
