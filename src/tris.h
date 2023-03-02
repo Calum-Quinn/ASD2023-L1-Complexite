@@ -6,8 +6,8 @@
 template <class T>
 bool bubbleSort(T begin, T end);
 
-template <class T>
-bool insertSort(T begin, T end);
+template <class Iterator, typename Number>
+bool insertSort(Iterator begin, Iterator end);
 
 template <class T>
 bool selectionSort(T begin, T end);

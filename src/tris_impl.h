@@ -21,18 +21,18 @@ bool bubbleSort(T begin, T end){
             }
         }
     }
-    return estTrie(begin, end);
+    return is_sorted(begin, end);
 }
 
 //---------------------------------------------------------
 // Fonction de tri par insertion
 
-template <class T>
-bool insertSort(T begin, T end){
-    T tmp;
-    T j;
-    for (T i = begin + 1; i != end; ++i) {
-        *tmp = *i;
+template <class Iterator, typename Number>
+bool insertSort(Iterator begin, Iterator end) {
+    Number tmp;
+    Iterator j;
+    for (Iterator i = begin + 1; i != end; ++i) {
+        tmp = *i;
         j   = i;
         while (j != begin and *(j - 1) > *tmp) {
             *j = *(j-1);
@@ -40,26 +40,26 @@ bool insertSort(T begin, T end){
         }
         *j = *tmp;
     }
-    return estTrie(begin, end);
+    return is_sorted(begin, end);
 }
 
 
 //--------------------------------------------------------
 //Fonction de tri par sélection
-template <class T>
-bool selectionSort(T begin, T end) {
+template <class Iterator>
+bool selectionSort(Iterator begin, Iterator end) {
     if (begin != end) {
-        T iMin;
-        for (T i = begin; i != end - 1; ++i) {
+        Iterator iMin;
+        for (Iterator i = begin; i != end - 1; ++i) {
             iMin = i;
-            for (T j = i + 1; j != end; ++j) {
+            for (Iterator j = i + 1; j != end; ++j) {
                 if (*j < *iMin)
                     iMin = j;
             }
             swap(*i, *iMin);
         }
     }
-    return estTrie(begin, end);
+    return is_sorted(begin, end);
 }
 
 
