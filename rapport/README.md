@@ -15,3 +15,6 @@ données et illustrant votre analyse, comme les 2 exemples ci-dessous.
 
 ![example2](svg/example2.svg)
 
+Voici le graphique pour les 5 types de tris avec un vecteur trié par ordre croissant.
+
+
