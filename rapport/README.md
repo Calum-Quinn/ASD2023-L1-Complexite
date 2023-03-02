@@ -11,11 +11,35 @@ vous en fournit un exemple.
 Il doit inclure des graphiques au format svg produit - par exemple par excel - à partir de ces 
 données et illustrant votre analyse, comme les 2 exemples ci-dessous. 
 
-Voici le graphique pour les 5 types de tris avec un vecteur trié par ordre croissant.
-
-![croissant](svg/tri_croissant.svg)
+## Vecteurs croissant
 
 Nous pouvons constater que pour un petit nombre de valeurs tous les tris font presque le même temps.
 Les tris d'Insertion, Sort et stable Sort font presque les mêmes temps quelque soit le nombre de donnée.
 Dès que nous commencons à augmenter le nombre de valeur le tri par Bubble Sort est celui qui prend le plus de temps.
 Le tris qui prend le moins de temps dans son ensemble est le tris par Insertion.
+
+Voici le graphique pour les 5 types de tris avec un vecteur trié par ordre croissant.
+
+![croissant](svg/tri_croissant.svg)
+
+## Vecteurs decroissant
+
+Nous pouvons constater qu'avec un faible nombre de valeurs tous les tris font le même temps.
+Le Tri Bubble Sort est de nouveau celui qui est le plus long avec un haut nombre de valeurs.
+Le Tri par insertion cette fois ci est le deuxième plus long.
+Les deux tris fourni par la librairie alogrithme sont encore les plus rapides.
+
+Voici le graphique pour les 5 types de tris avec un vecteur trié par ordre decroissant.
+
+![croissant](svg/tri_decroissant.svg)
+
+## Vecteurs aléatoire
+
+Nous pouvons constater qu'avec un faible nombre de valeurs tous les tris font le même temps.
+Le Tri Bubble Sort est de nouveau celui qui est le plus long avec un haut nombre de valeurs.
+Le Tri par insertion et par selections font le même temps de manière générale.
+Les deux tris fourni par la librairie alogrithme sont encore les plus rapides.
+
+Voici le graphique pour les 5 types de tris avec un vecteur trié aléatoirement.
+
+![croissant](svg/tri_aleatoire.svg)
