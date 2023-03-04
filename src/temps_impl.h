@@ -16,5 +16,9 @@ double mesure_temps(std::vector<T> v1, Fn f) {
     return (double)time_ms.count();
 }
 
+template<typename T, typename Fn>
+double mesure_op(std::vector<T> v1, Fn f) {
+    f(v1.begin(), v1.end());
+}
 
 #endif //ASD2022_L1_COMPLEXITE_TEMPS_IMPL_H

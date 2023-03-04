@@ -1,7 +1,3 @@
-//
-// Created by ema on 28.02.2023.
-//
-
 #ifndef ASD2022_L1_COMPLEXITE_OPCOUNTER_IMPL_H
 #define ASD2022_L1_COMPLEXITE_OPCOUNTER_IMPL_H
 

@@ -30,7 +30,7 @@ std::vector<T> generateVector(size_t n, unsigned seed, typeTri tri) {
    if (tri == typeTri::PRESQUETRIE) {
        srand((seed));
        for (size_t i = 0; i < vecteur.size(); ++i) {
-           vecteur[i] = size_t(double(i)/2. + double(rand()%n)/2.); // Somme pondérée entre tri croissant et aléatoire
+           vecteur[i] = T(double(i)/2. + double(rand()%n)/2.); // Somme pondérée entre tri croissant et aléatoire
        }
    }
 
