@@ -14,7 +14,7 @@ bool bubbleSort(Iterator begin, Iterator end){
     if (begin != end){
         long long cpt = 0;
         for (Iterator i = begin; i != end - 1; ++i){
-            for (Iterator j = begin + 1; j != end - cpt; ++j){ // TODO : la comparaison avec end - i était incorrecte
+            for (Iterator j = begin + 1; j != end - cpt; ++j){
                 if (*(j-1) > *j) {
                     swap(*(j-1), *j);
                 }
