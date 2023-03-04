@@ -5,7 +5,7 @@ votre rapport.
 
 Il peut être divisé un plusieurs fichiers mais README.md doit en être le point d'entrée. 
 
-Il doit inclure des liens vers les données au format csv produites par votre code. Le fichier [example.csv](csv/example.csv) 
+Il doit inclure des liens vers les données au format csv produites par votre code. Le fichier [example.csvb](csv/example.csv) 
 vous en fournit un exemple.
 
 Il doit inclure des graphiques au format svg produit - par exemple par excel - à partir de ces 
