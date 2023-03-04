@@ -21,6 +21,7 @@ Le tris qui prend le moins de temps dans son ensemble est le tris par Insertion.
 Voici le graphique pour les 5 types de tris avec un vecteur trié par ordre croissant.
 
 ![croissant](svg/tri_croissant.svg)
+[CSV Croissant](csv/tri_croissant.csv) 
 
 ## Vecteurs decroissant
 
@@ -31,7 +32,8 @@ Les deux tris fourni par la librairie alogrithme sont encore les plus rapides.
 
 Voici le graphique pour les 5 types de tris avec un vecteur trié par ordre decroissant.
 
-![croissant](svg/tri_decroissant.svg)
+![decroissant](svg/tri_decroissant.svg)
+[CSV Decroissant](csv/tri_decroissant.csv)
 
 ## Vecteurs aléatoire
 
@@ -42,4 +44,17 @@ Les deux tris fourni par la librairie alogrithme sont encore les plus rapides.
 
 Voici le graphique pour les 5 types de tris avec un vecteur trié aléatoirement.
 
-![croissant](svg/tri_aleatoire.svg)
+![aleatoire](svg/tri_aleatoire.svg)
+[CSV Aleatoire](csv/tri_aleatoire.csv)
+
+## Vecteurs presque trié
+
+Nous pouvons constater qu'avec un faible nombre de valeurs tous les tris font le même temps.
+Le Tri Bubble Sort est de nouveau celui qui est le plus long avec un haut nombre de valeurs.
+Le Tri par sélection est le deuxième plus long suivi du Tri par insertion.
+Les deux tris fourni par la librairie alogrithme sont encore les plus rapides.
+
+Voici le graphique pour les 5 types de tris avec un vecteur presque trié.
+
+![presqueTrie](svg/tri_presqueTrie.svg)
+[CSV Presque Trié](csv/tri_presqueTrie.csv)
