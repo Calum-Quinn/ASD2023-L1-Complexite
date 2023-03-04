@@ -47,4 +47,4 @@ Voici le graphique pour les 5 types de tris avec un vecteur trié aléatoirement
 ## Vecteurs presque trié
 
 
-(svg/tri_presqueTrie.svg)
+![croissant](svg/tri_presqueTrie.svg)
