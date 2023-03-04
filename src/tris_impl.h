@@ -33,7 +33,7 @@ bool insertSort(Iterator begin, Iterator end) {
     Number tmp;
     Iterator j;
     for (Iterator i = begin + 1; i != end; ++i) {
-        tmp = *i;
+        tmp = Number(*i);
         j   = i;
         while (j != begin and *(j - 1) > tmp) {
             *j = *(j-1);

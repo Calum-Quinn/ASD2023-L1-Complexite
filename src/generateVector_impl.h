@@ -2,7 +2,7 @@
 #define ASD2022_L1_COMPLEXITE_GENERATEVECTOR_IMPL_H
 
 #include <random>
-
+//#include "OpCounter.h"
 
 template <typename T>
 std::vector<T> generateVector(size_t n, unsigned seed, typeTri tri) {

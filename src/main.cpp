@@ -15,14 +15,16 @@ Compilateur    : Apple clang version 14.0.0 (clang-1400.0.29.102)
 #include "temps.h"
 #include "tris.h"
 #include "generateVector.h"
-
+#include "OpCounter.h"
 
 using namespace std;
 
-void exporter_csv(string const& filename, const vector<double>& n_values, const vector<vector<double>>& mesures);
+template <typename T>
+void exporter_csv(string const& filename, const vector<int>& n_values, const vector<vector<T>>& mesures);
 
 int main() {
 
+    const int NBR_TRIS = 5;
     const int VALEURSMIN = 10;
     const int VALEURSMAX = 100;
     const int PALIER = 10;
@@ -42,6 +44,10 @@ int main() {
 
     for (size_t i = VALEURSMIN, compteur = 0; i <= VALEURSMAX; i += PALIER, ++compteur) {
         vector<int> vecteur = generateVector<int>(i, SEED, typeTri::PRESQUETRIE);
+
+        vector<OpCounter<int>> opVecteur = generateVector<OpCounter<int>>(i, SEED, typeTri::PRESQUETRIE);
+        OpCounter<int>::resetCnt(); //Reset les compteurs pour que ça ne retourne seulement les opérations
+                                    //dans les tris
 
         valeurs[compteur] = double(i);
 
@@ -92,7 +98,8 @@ int main() {
    return EXIT_SUCCESS;
 }
 
-void exporter_csv(string const& filename, const vector<double>& n_values, const vector<vector<double>>& mesures) {
+template <typename T>
+void exporter_csv(string const& filename, const vector<int>& n_values, const vector<vector<T>>& mesures) {
 
     ofstream out(filename);
 
@@ -102,7 +109,7 @@ void exporter_csv(string const& filename, const vector<double>& n_values, const 
     }
 
     out << "n";
-    for(double n : n_values) out << ";" << n;
+    for(int n : n_values) out << ";" << n;
     out << endl;
 
     if (mesures.size() <= 5) {
