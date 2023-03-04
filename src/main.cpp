@@ -28,14 +28,15 @@ int main() {
     const int PALIER = 10;
     const unsigned SEED = 475678;
 
-    vector<int> vec1 = {1,290,3,47,5,64,7,23,56};
-    vector<int> vec2 = {1,290,3,47,5,64,7,23,56};
-    vector<int> vec3 = {1,290,3,47,5,64,7,23,56};
+    vector<int> valeurs((VALEURSMAX - VALEURSMIN) / 10 + 1); //Vecteur pour stocker le nombre de valeurs triées
+    vector<vector<double>> mesures(NBR_TRIS); //Vecteur pour stocker des vecteurs de mesures de temps
+                                                                //de tri
+    vector<vector<unsigned>> mesuresOp(2 * NBR_TRIS);
 
-    vector<double> valeurs((VALEURSMAX - VALEURSMIN) / 10 + 1); //Vecteur pour stocker le nombre de valeurs triées
-    vector<vector<double>> mesures(5); //Vecteur pour stocker des vecteurs de mesures de temps
-                                                                //de tris
     for (vector<double>& mesure : mesures) {
+        mesure.resize(((VALEURSMAX - VALEURSMIN) / 10 + 1));
+    }
+    for (vector<unsigned>& mesure : mesuresOp) {
         mesure.resize(((VALEURSMAX - VALEURSMIN) / 10 + 1));
     }
 
@@ -44,7 +45,7 @@ int main() {
 
         valeurs[compteur] = double(i);
 
-
+        //Mesures du temps de tri
         cout << "BubbleSort trie ";
         mesures[0][compteur] = mesure_temps(vecteur, bubbleSort<vector<int>::iterator>);
         cout << "InsertSort trie ";
@@ -57,9 +58,36 @@ int main() {
         mesures[4][compteur] = mesure_temps(vecteur, stable_sort<vector<int>::iterator>);
 
         cout << endl;
+
+        bubbleSort<vector<OpCounter<int>>::iterator>(opVecteur.begin(),opVecteur.end());
+        mesuresOp[0][compteur] = OpCounter<int>::cntAff;
+        mesuresOp[1][compteur] = OpCounter<int>::cntComp;
+        OpCounter<int>::resetCnt();
+
+        insertSort<vector<OpCounter<int>>::iterator,OpCounter<int>>(opVecteur.begin(),opVecteur.end());
+        mesuresOp[2][compteur] = OpCounter<int>::cntAff;
+        mesuresOp[3][compteur] = OpCounter<int>::cntComp;
+        OpCounter<int>::resetCnt();
+
+        selectionSort<vector<OpCounter<int>>::iterator>(opVecteur.begin(),opVecteur.end());
+        mesuresOp[4][compteur] = OpCounter<int>::cntAff;
+        mesuresOp[5][compteur] = OpCounter<int>::cntComp;
+        OpCounter<int>::resetCnt();
+
+        sort<vector<OpCounter<int>>::iterator>(opVecteur.begin(),opVecteur.end());
+        mesuresOp[6][compteur] = OpCounter<int>::cntAff;
+        mesuresOp[7][compteur] = OpCounter<int>::cntComp;
+        OpCounter<int>::resetCnt();
+
+        stable_sort<vector<OpCounter<int>>::iterator>(opVecteur.begin(),opVecteur.end());
+        mesuresOp[8][compteur] = OpCounter<int>::cntAff;
+        mesuresOp[9][compteur] = OpCounter<int>::cntComp;
+
+        cout << endl;
     }
 
     exporter_csv("C:/Users/calum/OneDrive/Documents/Etudes/HEIG/Semestre2/ASD/Laboratoires//ASD2023-L1-Complexite//src/example.csv",valeurs,mesures);
+    exporter_csv<unsigned>("C:/Users/calum/OneDrive/Documents/Etudes/HEIG/Semestre2/ASD/Laboratoires//ASD2023-L1-Complexite//src/compteOperations.csv",valeurs,mesuresOp);
 
    return EXIT_SUCCESS;
 }
@@ -77,18 +105,38 @@ void exporter_csv(string const& filename, const vector<double>& n_values, const 
     for(double n : n_values) out << ";" << n;
     out << endl;
 
-    for(size_t i = 0; i < mesures.size(); ++i) {
-        switch (i) {
-            case 0 : out << "BubbleSort"; break;
-            case 1 : out << "InsertionSort"; break;
-            case 2 : out << "SelectionSort"; break;
-            case 3 : out << "Sort"; break;
-            case 4 : out << "StableSort"; break;
-            default: break;
+    if (mesures.size() <= 5) {
+        for(size_t i = 0; i < mesures.size(); ++i) {
+            switch (i) {
+                case 0 : out << "BubbleSort"; break;
+                case 1 : out << "InsertionSort"; break;
+                case 2 : out << "SelectionSort"; break;
+                case 3 : out << "Sort"; break;
+                case 4 : out << "StableSort"; break;
+                default: break;
+            }
+            for (T d : mesures[i])
+                out << ";" << d;
+            out << endl;
         }
-        for (double d : mesures[i])
-            out << ";" << d;
-        out << endl;
+    } else {
+        for(size_t i = 0; i < mesures.size(); ++i) {
+            switch (i) {
+                case 0 : out << "Bubble Affecations"; break;
+                case 1 : out << "Bubble Comparaisons"; break;
+                case 2 : out << "Insertion Affecations"; break;
+                case 3 : out << "Insertion Comparaisons"; break;
+                case 4 : out << "Selection Affectations"; break;
+                case 5 : out << "Selection Comparaisons"; break;
+                case 6 : out << "Sort Affecations"; break;
+                case 7 : out << "Sort Comparaisons"; break;
+                case 8 : out << "StableSort Affectations"; break;
+                case 9 : out << "StableSort Comparaisons"; break;
+                default: break;
+            }
+            for (T d : mesures[i])
+                out << ";" << d;
+            out << endl;
+        }
     }
-
 }

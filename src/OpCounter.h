@@ -1,7 +1,3 @@
-//
-// Created by ema on 28.02.2023.
-//
-
 #ifndef ASD2022_L1_COMPLEXITE_OPCOUNTER_H
 #define ASD2022_L1_COMPLEXITE_OPCOUNTER_H
 
@@ -19,9 +15,6 @@ public:
     OpCounter& operator=(const OpCounter& autre) const;
 private:
     T val;
-    static unsigned  cntAff,
-            cntComp,
-            cntIt;
 };
 
 #include "OpCounter_impl.h"
