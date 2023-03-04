@@ -10,7 +10,7 @@ Compilateur    : Apple clang version 14.0.0 (clang-1400.0.29.102)
 #include <iostream>
 #include <vector>
 #include <fstream>
-#include "algorithm"
+#include <algorithm>
 
 #include "temps.h"
 #include "tris.h"
@@ -18,8 +18,6 @@ Compilateur    : Apple clang version 14.0.0 (clang-1400.0.29.102)
 
 
 using namespace std;
-
-unsigned cnt = 0;
 
 void exporter_csv(string const& filename, const vector<double>& n_values, const vector<vector<double>>& mesures);
 
@@ -41,26 +39,10 @@ int main() {
         mesure.resize(((VALEURSMAX - VALEURSMIN) / 10 + 1));
     }
 
-//    vector<int> vecteur = generateVector<int>(10, SEED, typeTri::CROISSANT);
-//    mesures[0][0] = mesure_temps(vecteur, bubbleSort<vector<int>::iterator>);
-
     for (size_t i = VALEURSMIN, compteur = 0; i <= VALEURSMAX; i += PALIER, ++compteur) {
         vector<int> vecteur = generateVector<int>(i, SEED, typeTri::PRESQUETRIE);
 
-        valeurs[compteur] = i;
-
-/*
-        cout << mesure_temps(vecteur, bubbleSort<vector<int>::iterator>) << endl;
-        cout << mesure_temps(vecteur, insertSort<vector<int>::iterator,int>) << endl;
-        cout << mesure_temps(vecteur, selectionSort<vector<int>::iterator>) << endl;
-        cout << mesure_temps(vecteur, sort<vector<int>::iterator>) << endl;*/
-//        cout << i << endl;
-//        cout << mesure_temps(vecteur, stable_sort<vector<int>::iterator>) << endl;
-
-
-        //double bidon = mesure_temps(vecteur, bubbleSort<vector<int>::iterator>);
-        //;mesures[0][i - VALEURSMIN] = mesure_temps(vecteur, stable_sort<vector<int>::iterator>);
-//        cout << mesure_temps(vecteur, stable_sort<vector<int>::iterator>);
+        valeurs[compteur] = double(i);
 
 
         mesures[0][compteur] = mesure_temps(vecteur, bubbleSort<vector<int>::iterator>);
@@ -95,6 +77,7 @@ void exporter_csv(string const& filename, const vector<double>& n_values, const 
             case 2 : out << "SelectionSort"; break;
             case 3 : out << "Sort"; break;
             case 4 : out << "StableSort"; break;
+            default: break;
         }
         for (double d : mesures[i])
             out << ";" << d;
