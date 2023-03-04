@@ -1,9 +1,20 @@
+/* -----------------------------------------------------------------------------------
+Nom du fichier : OpCounter_impl.h (xxx = h ou cpp)
+Auteur(s)      : Ewan Mariaux, Calum Quinn, Dario Vasques
+Date creation  : 20.02.2023
+Description    : Classe chargé de compter le nombres d'opérations effectués lors d'un tris
+Remarque(s)    : <à compléter>
+Compilateur    : Apple clang version 14.0.0 (clang-1400.0.29.102)
+----------------------------------------------------------------------------------- */
+
 #ifndef ASD2022_L1_COMPLEXITE_OPCOUNTER_IMPL_H
 #define ASD2022_L1_COMPLEXITE_OPCOUNTER_IMPL_H
 
+//Compteur d'affectations
 template <typename T>
 unsigned  OpCounter<T>::cntAff = 0;
 
+//Compteur de comparaisons
 template <typename T>
 unsigned  OpCounter<T>::cntComp = 0;
 
