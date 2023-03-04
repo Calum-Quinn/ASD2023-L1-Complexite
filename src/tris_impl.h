@@ -1,6 +1,14 @@
+/* -----------------------------------------------------------------------------------
+Nom du fichier : tris_impl.h (xxx = h ou cpp)
+Auteur(s)      : Ewan Mariaux, Calum Quinn, Dario Vasques
+Date creation  : 20.02.2023
+Description    : Programme triant des vecteurs selon le tri demandé
+Remarque(s)    : <à compléter>
+Compilateur    : Apple clang version 14.0.0 (clang-1400.0.29.102)
+----------------------------------------------------------------------------------- */
+
 #ifndef ASD2022_L1_COMPLEXITE_TRIS_IMPL_H
 #define ASD2022_L1_COMPLEXITE_TRIS_IMPL_H
-
 
 #include <algorithm>
 #include <iostream>
@@ -9,6 +17,7 @@ using namespace std;
 
 // Basé sur les exemples de tris du Git PRG1 de M Breguet
 
+// Fonction de tri par bubble
 template <class Iterator>
 bool bubbleSort(Iterator begin, Iterator end){
     if (begin != end){
@@ -25,9 +34,7 @@ bool bubbleSort(Iterator begin, Iterator end){
     return is_sorted(begin, end);
 }
 
-//---------------------------------------------------------
 // Fonction de tri par insertion
-
 template <class Iterator, typename Number>
 bool insertSort(Iterator begin, Iterator end) {
     Number tmp;
@@ -44,8 +51,6 @@ bool insertSort(Iterator begin, Iterator end) {
     return is_sorted(begin, end);
 }
 
-
-//--------------------------------------------------------
 //Fonction de tri par sélection
 template <class Iterator>
 bool selectionSort(Iterator begin, Iterator end) {
@@ -62,6 +67,5 @@ bool selectionSort(Iterator begin, Iterator end) {
     }
     return is_sorted(begin, end);
 }
-
 
 #endif //ASD2022_L1_COMPLEXITE_TRIS_IMPL_H
