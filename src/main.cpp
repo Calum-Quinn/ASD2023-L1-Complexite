@@ -26,7 +26,7 @@ int main() {
     const int VALEURSMIN = 10;
     const int VALEURSMAX = 100;
     const int PALIER = 10;
-    const int SEED = 475678;
+    const unsigned SEED = 475678;
 
     vector<int> vec1 = {1,290,3,47,5,64,7,23,56};
     vector<int> vec2 = {1,290,3,47,5,64,7,23,56};
@@ -45,11 +45,18 @@ int main() {
         valeurs[compteur] = double(i);
 
 
+        cout << "BubbleSort trie ";
         mesures[0][compteur] = mesure_temps(vecteur, bubbleSort<vector<int>::iterator>);
+        cout << "InsertSort trie ";
         mesures[1][compteur] = mesure_temps(vecteur, insertSort<vector<int>::iterator,int>);
+        cout << "SelectionSort trie ";
         mesures[2][compteur] = mesure_temps(vecteur, selectionSort<vector<int>::iterator>);
+        cout << "Sort trie ";
         mesures[3][compteur] = mesure_temps(vecteur, sort<vector<int>::iterator>);
+        cout << "StableSort trie ";
         mesures[4][compteur] = mesure_temps(vecteur, stable_sort<vector<int>::iterator>);
+
+        cout << endl;
     }
 
     exporter_csv("C:/Users/calum/OneDrive/Documents/Etudes/HEIG/Semestre2/ASD/Laboratoires//ASD2023-L1-Complexite//src/example.csv",valeurs,mesures);

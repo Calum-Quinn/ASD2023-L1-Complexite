@@ -6,9 +6,7 @@
 enum class typeTri {CROISSANT, DECROISSANT, ALEATOIRE, PRESQUETRIE};
 
 template <typename T>
-std::vector<T> generateVector(size_t n, int seed, typeTri tri);
-
-int nbAleatoire(int valMin, int valMax);
+std::vector<T> generateVector(size_t n, unsigned seed, typeTri tri);
 
 //#include "ge
 #endif //ASD2022_L1_COMPLEXITE_GENERATEVECTOR_H
