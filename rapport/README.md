@@ -43,3 +43,8 @@ Les deux tris fourni par la librairie alogrithme sont encore les plus rapides.
 Voici le graphique pour les 5 types de tris avec un vecteur trié aléatoirement.
 
 ![croissant](svg/tri_aleatoire.svg)
+
+## Vecteurs presque trié
+
+
+(svg/tri_presqueTrie.svg)
