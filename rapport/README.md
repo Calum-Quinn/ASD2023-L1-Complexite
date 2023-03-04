@@ -31,7 +31,7 @@ Les deux tris fourni par la librairie alogrithme sont encore les plus rapides.
 
 Voici le graphique pour les 5 types de tris avec un vecteur trié par ordre decroissant.
 
-![croissant](svg/tri_decroissant.svg)
+![decroissant](svg/tri_decroissant.svg)
 
 ## Vecteurs aléatoire
 
@@ -42,9 +42,15 @@ Les deux tris fourni par la librairie alogrithme sont encore les plus rapides.
 
 Voici le graphique pour les 5 types de tris avec un vecteur trié aléatoirement.
 
-![croissant](svg/tri_aleatoire.svg)
+![aleatoire](svg/tri_aleatoire.svg)
 
 ## Vecteurs presque trié
 
+Nous pouvons constater qu'avec un faible nombre de valeurs tous les tris font le même temps.
+Le Tri Bubble Sort est de nouveau celui qui est le plus long avec un haut nombre de valeurs.
+Le Tri par sélection est le deuxième plus long suivi du Tri par insertion.
+Les deux tris fourni par la librairie alogrithme sont encore les plus rapides.
 
-![croissant](svg/tri_presqueTrie.svg)
+Voici le graphique pour les 5 types de tris avec un vecteur presque trié.
+
+![presqueTrie](svg/tri_presqueTrie.svg)
