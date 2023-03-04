@@ -4,7 +4,9 @@
 template <typename T>
 class OpCounter{
 public:
+    OpCounter() {};
     OpCounter(T i) : val(i){};
+    OpCounter(const OpCounter& autre) : val(autre.val){};
     static void resetCnt();
     bool operator<  (const OpCounter& autre) const;
     bool operator>  (const OpCounter& autre) const;
@@ -12,7 +14,9 @@ public:
     bool operator>= (const OpCounter& autre) const;
     bool operator== (const OpCounter& autre) const;
     bool operator!= (const OpCounter& autre) const;
-    OpCounter& operator=(const OpCounter& autre) const;
+    OpCounter& operator=(const OpCounter& autre);
+    static unsigned     cntAff,
+                        cntComp;
 private:
     T val;
 };
