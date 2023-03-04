@@ -5,7 +5,7 @@ votre rapport.
 
 Il peut être divisé un plusieurs fichiers mais README.md doit en être le point d'entrée. 
 
-Il doit inclure des liens vers les données au format csv produites par votre code. Le fichier [example.csvb](csv/example.csv) 
+Il doit inclure des liens vers les données au format csv produites par votre code. Le fichier [example.csv](csv/example.csv) 
 vous en fournit un exemple.
 
 Il doit inclure des graphiques au format svg produit - par exemple par excel - à partir de ces 
@@ -21,6 +21,7 @@ Le tris qui prend le moins de temps dans son ensemble est le tris par Insertion.
 Voici le graphique pour les 5 types de tris avec un vecteur trié par ordre croissant.
 
 ![croissant](svg/tri_croissant.svg)
+[CSV Croissant](csv/tri_croissant.csv) 
 
 ## Vecteurs decroissant
 
@@ -32,6 +33,7 @@ Les deux tris fourni par la librairie alogrithme sont encore les plus rapides.
 Voici le graphique pour les 5 types de tris avec un vecteur trié par ordre decroissant.
 
 ![decroissant](svg/tri_decroissant.svg)
+[CSV Decroissant](csv/tri_decroissant.csv)
 
 ## Vecteurs aléatoire
 
@@ -43,6 +45,7 @@ Les deux tris fourni par la librairie alogrithme sont encore les plus rapides.
 Voici le graphique pour les 5 types de tris avec un vecteur trié aléatoirement.
 
 ![aleatoire](svg/tri_aleatoire.svg)
+[CSV Aleatoire](csv/tri_aleatoire.csv)
 
 ## Vecteurs presque trié
 
@@ -54,3 +57,4 @@ Les deux tris fourni par la librairie alogrithme sont encore les plus rapides.
 Voici le graphique pour les 5 types de tris avec un vecteur presque trié.
 
 ![presqueTrie](svg/tri_presqueTrie.svg)
+[CSV Presque Trié](csv/tri_presqueTrie.csv)
