@@ -4,7 +4,8 @@ Auteur(s)      : Ewan Mariaux, Calum Quinn, Dario Vasques
 Date creation  : 20.02.2023
 Description    : Programme pour mesurer le temps pour un tri
 Remarque(s)    : <à compléter>
-Compilateur    : Apple clang version 14.0.0 (clang-1400.0.29.102)
+Compilateurs   : Apple clang version 14.0.0 (clang-1400.0.29.102) (Dario)
+               : Mingw-w64 g++ 12.2.0 (Calum et Ewan)
 ----------------------------------------------------------------------------------- */
 
 #ifndef ASD2022_L1_COMPLEXITE_MESURE_IMPL_H

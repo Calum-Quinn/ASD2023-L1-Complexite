@@ -4,16 +4,17 @@ Auteur(s)      : Ewan Mariaux, Calum Quinn, Dario Vasques
 Date creation  : 20.02.2023
 Description    : Programme pour mesurer le temps pour un tri
 Remarque(s)    : <à compléter>
-Compilateur    : Apple clang version 14.0.0 (clang-1400.0.29.102)
+Compilateurs   : Apple clang version 14.0.0 (clang-1400.0.29.102) (Dario)
+               : Mingw-w64 g++ 12.2.0 (Calum et Ewan)
 ----------------------------------------------------------------------------------- */
 
 #ifndef ASD2022_L1_COMPLEXITE_MESURE_H
 #define ASD2022_L1_COMPLEXITE_MESURE_H
 
     /**
-     * @name 	            : mesure_temps
+     * @name 	             : mesure_temps
      *
-     * @but 	            : mesure le temps que prends une fonction pour trier un vecteur
+     * @but 	             : mesure le temps que prends une fonction pour trier un vecteur
      * @param v1            : vecteur à trier
      * @param f             : fonction de tri à évaluer
      * @return              : temps de tri
