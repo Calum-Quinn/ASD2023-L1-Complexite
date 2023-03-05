@@ -18,12 +18,12 @@ Les tris d'Insertion, Sort et stable Sort font presque les mêmes temps quelque 
 Dès que nous commencons à augmenter le nombre de valeur le tri par Bubble Sort est celui qui prend le plus de temps.
 Le tris qui prend le moins de temps dans son ensemble est le tris par Insertion.
 
-Voici le graphique pour les 5 types de tris avec un vecteur trié par ordre croissant.
+Voici les graphiques pour les 5 types de tris avec un vecteur trié par ordre croissant.
 
 ![croissant](svg/tri_croissant.svg)
 [CSV Croissant](csv/tri_croissant.csv) 
 
-Concernant le nombre d'opérations d'affectation ou de comparaison, 
+Concernant le nombre d'opérations d'affectation ou de comparaison,
 
 ![croissant](svg/operations_croissant.svg)
 [CSV Operations Croissant](csv/operation_croissant.csv) 
