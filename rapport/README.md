@@ -28,7 +28,7 @@ aux autres tries, ce qui les rendent moins performant pour ce type de vecteur.
 Pour les autres, ils se valent à part le tri Sort de la librairie algorithme qui se démarque.
 
 ![croissant](svg/operations_croissant.svg)
-[CSV Operations Croissant](csv/operation_croissant.csv) 
+[CSV Operations Croissant](csv/operations_croissant.csv) 
 
 ## Vecteurs decroissant
 
@@ -47,7 +47,7 @@ aux autres tries, ce qui les rendent moins performant pour ce type de vecteur.
 Ceux de la librairie algorithme sont à nouveau les plus performants.
 
 ![decroissant](svg/operations_decroissant.svg)
-[CSV Operations Decroissant](csv/operation_decroissant.csv) 
+[CSV Operations Decroissant](csv/operations_decroissant.csv) 
 
 ## Vecteurs aléatoire
 
@@ -64,7 +64,7 @@ Voici les graphiques pour les 5 types de tris avec un vecteur trié aléatoireme
 D'après l'analyse ci-dessus, les tris fournis par la librairie alogrithme effectuent le moins d'opérations pour trier ce type de vecteur.
 
 ![aleatoire](svg/operations_aleatoire.svg)
-[CSV Operations Aleatoire](csv/operation_aleatoire.csv) 
+[CSV Operations Aleatoire](csv/operations_aleatoire.csv) 
 
 ## Vecteurs presque trié
 
@@ -81,5 +81,5 @@ Voici les graphiques pour les 5 types de tris avec un vecteur presque trié.
 D'après l'analyse ci-dessus, les tris fournis par la librairie alogrithme effectuent le moins d'opérations pour trier ce type de vecteur
 
 ![presqueTrie](svg/operations_presqueTrie.svg)
-[CSV Presque Trié](csv/operation_presqueTrie.csv)
+[CSV Presque Trié](csv/operations_presqueTrie.csv)
 
