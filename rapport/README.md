@@ -23,6 +23,11 @@ Voici le graphique pour les 5 types de tris avec un vecteur trié par ordre croi
 ![croissant](svg/tri_croissant.svg)
 [CSV Croissant](csv/tri_croissant.csv) 
 
+Concernant le
+
+![croissant](svg/operations_croissant.svg)
+[CSV Croissant](csv/operation_croissant.csv) 
+
 ## Vecteurs decroissant
 
 Nous pouvons constater qu'avec un faible nombre de valeurs tous les tris font le même temps.
