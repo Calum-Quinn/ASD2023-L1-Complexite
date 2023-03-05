@@ -80,6 +80,6 @@ Voici les graphiques pour les 5 types de tris avec un vecteur presque trié.
 
 D'après l'analyse ci-dessus, les tris fournis par la librairie alogrithme effectuent le moins d'opérations pour trier ce type de vecteur
 
-![presqueTrie](svg/operation_presqueTrie.svg)
+![presqueTrie](svg/operations_presqueTrie.svg)
 [CSV Presque Trié](csv/operation_presqueTrie.csv)
 
