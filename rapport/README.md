@@ -42,9 +42,9 @@ Voici les graphiques pour les 5 types de tris avec un vecteur trié par ordre de
 ![decroissant](svg/tri_decroissant.svg)
 [CSV Decroissant](csv/tri_decroissant.csv)
 
-Concernant le nombre d'opérations d'affectation ou de comparaison, les tris Bubble sort et de Selection font beaucoup de comparaison par rapport
+Concernant le nombre d'opérations d'affectation ou de comparaison, les tris standards font beaucoup de comparaison et d'affectation par rapport
 aux autres tries, ce qui les rendent moins performant pour ce type de vecteur.
-Pour les autres, ils se valent à part le tri Sort de la librairie algorithme qui se démarque.
+Ceux de la librairie algorithme sont à nouveau les plus performants.
 
 ![decroissant](svg/operations_decroissant.svg)
 [CSV Operations Decroissant](csv/operation_decroissant.csv) 
@@ -54,12 +54,17 @@ Pour les autres, ils se valent à part le tri Sort de la librairie algorithme qu
 Nous pouvons constater qu'avec un faible nombre de valeurs tous les tris font le même temps.
 Le Tri Bubble Sort est de nouveau celui qui est le plus long avec un haut nombre de valeurs.
 Le Tri par insertion et par selections font le même temps de manière générale.
-Les deux tris fourni par la librairie alogrithme sont encore les plus rapides.
+Les deux tris fournis par la librairie alogrithme sont encore les plus rapides.
 
-Voici le graphique pour les 5 types de tris avec un vecteur trié aléatoirement.
+Voici les graphiques pour les 5 types de tris avec un vecteur trié aléatoirement.
 
 ![aleatoire](svg/tri_aleatoire.svg)
 [CSV Aleatoire](csv/tri_aleatoire.csv)
+
+D'après l'analyse ci-dessus, les tris fournis par la librairie alogrithme effectuent le moins d'opérations pour trier ce type de vecteur.
+
+![aleatoire](svg/operations_aleatoire.svg)
+[CSV Operations Aleatoire](csv/operation_aleatoire.csv) 
 
 ## Vecteurs presque trié
 
@@ -68,7 +73,13 @@ Le Tri Bubble Sort est de nouveau celui qui est le plus long avec un haut nombre
 Le Tri par sélection est le deuxième plus long suivi du Tri par insertion.
 Les deux tris fourni par la librairie alogrithme sont encore les plus rapides.
 
-Voici le graphique pour les 5 types de tris avec un vecteur presque trié.
+Voici les graphiques pour les 5 types de tris avec un vecteur presque trié.
 
 ![presqueTrie](svg/tri_presqueTrie.svg)
 [CSV Presque Trié](csv/tri_presqueTrie.csv)
+
+D'après l'analyse ci-dessus, les tris fournis par la librairie alogrithme effectuent le moins d'opérations pour trier ce type de vecteur
+
+![presqueTrie](svg/operation_presqueTrie.svg)
+[CSV Presque Trié](csv/operation_presqueTrie.csv)
+
