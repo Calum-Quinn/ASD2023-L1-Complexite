@@ -23,7 +23,9 @@ Voici les graphiques pour les 5 types de tris avec un vecteur trié par ordre cr
 ![croissant](svg/tri_croissant.svg)
 [CSV Croissant](csv/tri_croissant.csv) 
 
-Concernant le nombre d'opérations d'affectation ou de comparaison,
+Concernant le nombre d'opérations d'affectation ou de comparaison, les tris Bubble sort et de Selection font beaucoup de comparaison par rapport
+aux autres tries, ce qui les rendent moins performant pour ce type de vecteur.
+Pour les autres, ils se valent à part le tri Sort de la librairie algorithme qui se démarque.
 
 ![croissant](svg/operations_croissant.svg)
 [CSV Operations Croissant](csv/operation_croissant.csv) 
@@ -35,10 +37,17 @@ Le Tri Bubble Sort est de nouveau celui qui est le plus long avec un haut nombre
 Le Tri par insertion cette fois ci est le deuxième plus long.
 Les deux tris fourni par la librairie alogrithme sont encore les plus rapides.
 
-Voici le graphique pour les 5 types de tris avec un vecteur trié par ordre decroissant.
+Voici les graphiques pour les 5 types de tris avec un vecteur trié par ordre decroissant.
 
 ![decroissant](svg/tri_decroissant.svg)
 [CSV Decroissant](csv/tri_decroissant.csv)
+
+Concernant le nombre d'opérations d'affectation ou de comparaison, les tris Bubble sort et de Selection font beaucoup de comparaison par rapport
+aux autres tries, ce qui les rendent moins performant pour ce type de vecteur.
+Pour les autres, ils se valent à part le tri Sort de la librairie algorithme qui se démarque.
+
+![decroissant](svg/operations_decroissant.svg)
+[CSV Operations Decroissant](csv/operation_decroissant.csv) 
 
 ## Vecteurs aléatoire
 
