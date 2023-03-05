@@ -23,10 +23,10 @@ Voici le graphique pour les 5 types de tris avec un vecteur trié par ordre croi
 ![croissant](svg/tri_croissant.svg)
 [CSV Croissant](csv/tri_croissant.csv) 
 
-Concernant le
+Concernant le nombre d'opérations d'affectation ou de comparaison, 
 
 ![croissant](svg/operations_croissant.svg)
-[CSV Croissant](csv/operation_croissant.csv) 
+[CSV Operations Croissant](csv/operation_croissant.csv) 
 
 ## Vecteurs decroissant
 
