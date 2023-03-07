@@ -2,16 +2,17 @@
 Nom du fichier : tris_impl.h (xxx = h ou cpp)
 Auteur(s)      : Ewan Mariaux, Calum Quinn, Dario Vasques
 Date creation  : 20.02.2023
-Description    : Programme triant des vecteurs selon le tri demandé
+Description    : Algorithme triant des vecteurs selon le tri demandé
 Remarque(s)    : <à compléter>
-Compilateur    : Apple clang version 14.0.0 (clang-1400.0.29.102)
+Compilateurs   : Apple clang version 14.0.0 (clang-1400.0.29.102) (Dario)
+               : Mingw-w64 g++ 12.2.0 (Calum et Ewan)
 ----------------------------------------------------------------------------------- */
 
 #ifndef ASD2022_L1_COMPLEXITE_TRIS_IMPL_H
 #define ASD2022_L1_COMPLEXITE_TRIS_IMPL_H
 
-#include <algorithm>
-#include <iostream>
+#include <vector>       //Utilisation des vecteurs
+#include <algorithm>    //Utilisation du is_sorted
 
 using namespace std;
 
